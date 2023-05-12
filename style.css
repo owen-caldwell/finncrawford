@@ -83,6 +83,7 @@ nav {
     flex-direction: column;
     height: 70vh;
     justify-content: center;
+    align-items: center;
     margin: 2em 0 4em 0;
 }
 .slides a, .slides a img, .slides img{
