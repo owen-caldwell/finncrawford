@@ -1,0 +1,147 @@
+html {
+    height: 100%;
+}
+body {
+    background-color:rgb(229, 229, 229);
+    padding: 1em;
+    box-sizing:border-box;
+    border: 1px solid black;
+    margin: 0;
+    height: 100%;
+}
+header {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+header a {
+    color: black;
+    text-decoration: none;
+}
+#headerwrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#menubtn {
+    background: none;
+    border: none;
+}
+main {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 5% 90% 5%;
+}
+h1 {
+    font-size: 1em;
+    font-weight: normal;
+    margin-bottom: 1.5em;
+}
+nav {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 229, 229)
+}
+#navwrap {
+    display: flex;
+    margin: 35% auto auto auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#navwrap a {
+    width: 7em;
+    line-height: 1.2em;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+}
+#nav-contact {
+    margin-top: 3em;
+}
+#autoslideshow-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#autoslideshow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.slides {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    margin: 2em 0 4em 0;
+}
+.slides a, .slides a img, .slides img{
+    height: 100%;
+    object-fit: contain;
+}
+.slides a {
+    font-size: .75em;
+}
+#slideshow-wrapper {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#slideshow {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 80%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+#desktopnav {
+    display: none;
+}
+  
+@media (min-width: 750px) {
+    header button {
+        display: none;
+    }
+    #autoslideshow-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    #slideshow-wrapper {
+        justify-content: space-between;
+    }
+    #slideshow {
+        overflow: scroll;
+    }
+    #desktopnav {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20vh;
+    }
+    #desktopnav a {
+        line-height: 1.4em;
+        color: black;
+        text-decoration: none;
+    }
+}
