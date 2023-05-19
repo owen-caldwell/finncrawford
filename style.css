@@ -2,10 +2,9 @@ html {
     height: 100%;
 }
 body {
-    background-color:rgb(229, 229, 229);
+    background-color:#e5e5e5;
     padding: 1em;
     box-sizing:border-box;
-    border: 1px solid black;
     margin: 0;
     height: 100%;
 }
@@ -88,6 +87,7 @@ nav {
 }
 .slides a, .slides a img, .slides img{
     height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 .slides a {
