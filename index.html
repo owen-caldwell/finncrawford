@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>finn crawford</title>
+<head>
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical" href="/" />
+
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="Finn Crawford">
+    <meta name='url' content="" />
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Finn Crawford" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="">
+    <!--
+    <meta property="og:image" content="" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="750" />
+    -->
+    <title>
+        
+        Finn | Home
+        
+    </title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="">
-  </head>
-  <body>
-    <main>
-      <header>
-        <div id="headerwrap">
-          <span>finn crawford</span>
-          <button id="menubtn">(menu)</button>
+</head>
+<body>
+  <main>
+    <header>
+        <div class="header-wrapper">
+          FINN CRAWFORD
         </div>
-      </header>
-      <nav>
-        <div id="navwrap">
-          <a href="people.html">PEOPLE</a>
-          <a href="abstract.html">ABSTRACT</a>
-          <a href="mixed.html">MIXED</a>
-          <a id="nav-contact" href="?">contact</a>
+    </header>
+    <section class="index">
+        <nav>
+            <ul class="nav-wrapper">
+              <li class="menutitle">MENU</li>
+              <li><a href="project1.html">PEOPLE</a></li>
+              <li><a>ABSTRACT</a></li>
+              <li><a>FILM</a></li>
+              <li><a>OTHERS</a></li>
+            </ul>
+          </nav>
+        <div class="bio">
+            <p>
+                Answer misery adieus add wooded how nay men before though. 
+                Pretended belonging contented mrs suffering. 
+                Answer misery adseus add wooded how nay men before though. 
+                Pretended belonging contented mrs suffering.</p>
+            </div>
+    </section>
+    <section class="feature-gallery">
+        <span class="mobile-counter">
+            <div class="num">00</div>
+            <div class="total">00</div>
+        </span>
+    <div class="gallery">
+        <img src="portrait.jpg">
+    </div>
+    <span class="mt-wrapper">
+        <div class="mobile-title">PROJECT_TITLE</div>
+    </span>
+    <span class="desktop-info">
+        <div>
+            <div class="num">00</div>
+            <div>|</div>
+            <div class="total">00</div>
         </div>
-      </nav>
-      <div id="autoslideshow-wrapper">
-        <div id="desktopnav">
-          <h1>menu</h1>
-          <a href="people.html">PEOPLE</a>
-          <a href="abstract.html">ABSTRACT</a>
-          <a href="mixed.html">MIXED</a>
+        <div class="title">
+            PROJECT_TITLE
         </div>
-        <div id="autoslideshow">
-          <div class="slides fade">
-            <a><img src="photos/abstract/abstract1.jpg" alt="" srcset="" sizes=""></a>
-          </div>
-          <div class="slides fade">
-            <a><img src="photos/abstract/abstract4.jpg" alt="" srcset="" sizes=""></a>
-          </div>
-          <div class="slides fade">
-            <a><img src="photos/abstract/abstract2.jpg" alt="" srcset="" sizes=""></a>
-          </div>
-          <div class="slides fade">
-            <a><img src="photos/people/people2.jpg" alt="" srcset="" sizes=""></a>
-          </div>
-          <div class="slides fade">
-            <a><img src="photos/mixed/mixed1.jpg" alt="" srcset="" sizes=""></a>
-          </div>
-          <!-- <img src="photos/abstract/abstract2.jpg" alt="" srcset="" sizes="">
-          <img src="photos/people/people2.jpg" alt="" srcset="" sizes="">
-          <img src="photos/mixed/mixed1.jpg" alt="" srcset="" sizes="">
-          <img src="photos/abstract/abstract4.jpg" alt="" srcset="" sizes=""> -->
-        </div>
-      </div>
-      <footer>
-        <a>contact</a>
-      </footer>
-    </main>
-    <script src="hamburger.js"></script>
-    <script src="autoslideshow.js"></script>
-  </body>
+    </span>
+    </section>
+    <button id="hamburger">(menu)</button>
+  </main>
+  <script src="hamburger.js"></script>
+</body>
 </html>
