@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>finn crawford</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="">
-  </head>
-  <body>
-    <main>
-      <header>
-        <div id="headerwrap">
-          <a href="index.html">finn crawford</a>
-          <button id="menubtn">(menu)</button> <!-- "menu" becomes "x" -->
-        </div>
-      </header>
-      <nav>
-        <div id="navwrap">
-          <a href="people.html">PEOPLE</a>
-          <a href="abstract.html">ABSTRACT</a>
-          <a href="mixed.html">MIXED</a>
-          <a id="nav-contact" href="?">contact</a>
-        </div>
-      </nav>
-      <div id="slideshow-wrapper">
-        <div id="desktopnav">
-            <h1>projects</h1>
-            <a href="people.html">PEOPLE</a>
-            <a href="abstract.html">ABSTRACT</a>
-            <a href="mixed.html">MIXED</a>
-          </div>
-        <div id="slideshow">
-          <div class="slides">
-            <img src="photos/abstract/abstract1.jpg" alt="" srcset="" sizes="">
-          </div>
-          <div class="slides">
-            <img src="photos/abstract/abstract3.jpg" alt="" srcset="" sizes="">
-          </div>
-          <div class="slides">
-            <img src="photos/abstract/abstract1.jpg" alt="" srcset="" sizes="">
-          </div>
-          <!-- <img src="photos/abstract/abstract2.jpg" alt="" srcset="" sizes="">
-          <img src="photos/people/people2.jpg" alt="" srcset="" sizes="">
-          <img src="photos/mixed/mixed1.jpg" alt="" srcset="" sizes="">
-          <img src="photos/abstract/abstract4.jpg" alt="" srcset="" sizes=""> -->
-        </div>
-      </div>
-      <footer>
-        <a>contact</a>
+<head>
+    <!-- Canonical link to help search engines -->
+    <link rel="canonical" href="/" />
 
-      </footer>
-    </main>
-    <script src="hamburger.js"></script>
-  </body>
+    <!-- Basic meta elements -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="">
+    <meta name="author" content="Finn Crawford">
+    <meta name='url' content="" />
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Finn Crawford" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="">
+    <!--
+    <meta property="og:image" content="" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="750" />
+    -->
+    <link rel="stylesheet" href="https://use.typekit.net/qkb2tdx.css">
+    <title>
+        
+        Finn | People
+        
+    </title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      @media screen and (min-width: 750px) {
+        .feature-gallery {
+          transform: rotate(-90deg) translateX(-100vh);
+          transform-origin: top left;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          height: 100%;
+        }
+        .gallery {
+          transform: rotate(90deg) translateY(-100vh);
+          transform-origin: top left;
+          display: flex;
+          flex-direction: row;
+        }
+        .gallery img {
+          margin: 0 2em;
+        }
+      }
+    </style>
+</head>
+<body>
+  <main>
+    <header>
+        <div class="header-wrapper">
+          FINN CRAWFORD
+        </div>
+    </header>
+    <section class="index">
+        <nav>
+            <ul class="nav-wrapper">
+              <li class="menutitle">MENU</li>
+              <li><a href="project1.html">PEOPLE</a></li>
+              <li><a>ABSTRACT</a></li>
+              <li><a>FILM</a></li>
+              <li><a>OTHERS</a></li>
+            </ul>
+          </nav>
+        <div class="bio">
+            <p>
+                Answer misery adieus add wooded how nay men before though. 
+                Pretended belonging contented mrs suffering. 
+                Answer misery adseus add wooded how nay men before though. 
+                Pretended belonging contented mrs suffering.</p>
+            </div>
+    </section>
+    <section class="feature-gallery">
+    <div class="gallery">
+        <img src="portrait.jpg">
+        <img src="portrait.jpg">
+        <img src="portrait.jpg">
+        <img src="portrait.jpg">
+        <img src="portrait.jpg">
+    </div>
+    </section>
+    <button id="hamburger">(menu)</button>
+  </main>
+  <script src="hamburger.js"></script>
+</body>
 </html>
