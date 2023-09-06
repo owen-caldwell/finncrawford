@@ -32,6 +32,11 @@
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
     <style>
+      .gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
       @media screen and (min-width: 750px) {
         .feature-gallery {
           transform: rotate(-90deg) translateX(-100vh);
@@ -91,7 +96,7 @@
         <img src="portrait.jpg">
     </div>
     </section>
-    <button id="hamburger">(menu)</button>
+    <div class="hamburger-wrapper"><button id="hamburger">(menu)</button></div>
   </main>
   <script src="hamburger.js"></script>
 </body>
