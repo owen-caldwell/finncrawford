@@ -8,13 +8,13 @@ function toggleIndex() {
         console.log("opening")
         index.style.display = "flex";
         feature.style.display = "none";
-        hamburger.innerHTML = "(x)";
+        hamburger.src = "close.svg";
     } else {
         open = false;
         console.log("closing")
         index.style.display = "none";
         feature.style.display = "flex";
-        hamburger.innerHTML = "(menu)";
+        hamburger.src = "hamburger.svg";
     }
 }
 hamburger.addEventListener("click", toggleIndex);
