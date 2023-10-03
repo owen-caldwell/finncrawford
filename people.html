@@ -41,6 +41,7 @@
         .feature-gallery {
           transform: rotate(-90deg) translateX(-100vh);
           transform-origin: top left;
+          will-change: transform;
           overflow-y: scroll;
           overflow-x: hidden;
           justify-content: left;
@@ -48,7 +49,6 @@
         }
         .gallery {
           transform: rotate(90deg) translateY(-100vh);
-          width: 3500px;
           transform-origin: top left;
           display: flex;
           justify-content: left;
@@ -57,61 +57,60 @@
         .gallery img {
           margin: 0 2em;
         }
+        .index {width: 200px;}
       }
     </style>
 </head>
 <body>
+  <aside class="loading-screen">
+    <img src="FRCtext.png">
+    <div class="loader"></div>
+  </aside>
   <main>
     <header>
-      <img width="100" src="FRC.png">
+      <img id="logo" src="FRC.png">
+      <img id="hamburger" src="hamburger.svg">
     </header>
-    <aside class="loading-screen">
-      <img src="FRCtext.png">
-      loading
-    </aside>
     <section class="index">
         <nav>
             <ul class="nav-wrapper">
               <li class="menutitle">MENU</li>
-              <li><a href="project1.html">PEOPLE</a></li>
-              <li><a>ABSTRACT</a></li>
-              <li><a>FILM</a></li>
-              <li><a>OTHERS</a></li>
+              <li><a href="people">PEOPLE</a></li>
+              <li><a href="abtract">ABSTRACT</a></li>
+              <li><a href="fashion">FASHION</a></li>
+              <li><a href="film">FILM</a></li>
             </ul>
           </nav>
         <div class="bio">
-            <p>
-                Answer misery adieus add wooded how nay men before though. 
-                Pretended belonging contented mrs suffering. 
-                Answer misery adseus add wooded how nay men before though. 
-                Pretended belonging contented mrs suffering.</p>
-            </div>
+          <div class="mbio">
+              <p>
+                <b>Finn Crawford</b> is an artist and photographer based out of New York.
+                His work hyperfixates on textures and personalities in everyday objects
+                and people. You can reach him through <a href="mailto:crawfin03@gmail.com">email</a> or on <a href="https://www.instagram.com/crawfin03">instagram</a>.
+              </p>
+          </div>
+          <div class="altbio"><a href="https://www.instagram.com/crawfin03"><img width="20" src="insta.png"></a>
+            <a href="mailto:crawfin03@gmail.com"><img src="mail.png"></a></div>
+        </div>
     </section>
     <section class="feature-gallery">
     <div class="gallery">
-        <img rel="preload" src="photos/people/DSC4329.jpg">
-        <img rel="preload" src="photos/people/DSC4362.jpg">
-        <img rel="preload" src="photos/people/DSC4420.jpg">
-        <img rel="preload" src="photos/people/DSC4571.jpg">
-        <img rel="preload" src="photos/people/DSC4703.jpg">
-        <img rel="preload" src="photos/people/DSC4973.jpg">
-        <img rel="preload" src="photos/people/DSC5254.jpg">
-        <img rel="preload" src="photos/people/DSC5494.jpg">
-        <img rel="preload" src="photos/people/DSC5731.jpg">
-        <img rel="preload" src="photos/people/DSC5738.jpg">
-        <img rel="preload" src="photos/people/DSC6049-2.jpg">
-        <img rel="preload" src="photos/people/DSC6375.jpg">
-        <img rel="preload" src="photos/people/DSC6377.jpg">
-        <img rel="preload" src="photos/people/DSC6394.jpg">
-        <img rel="preload" src="photos/people/DSC7155-2.jpg">
-        <img rel="preload" src="photos/people/DSC7406.jpg">
-        <img rel="preload" src="photos/people/DSC7407.jpg">
-        <img rel="preload" src="photos/people/DSC9994.jpg">
+        <img rel="preload" src="photos/people/_DSC4329.jpg">
     </div>
     </section>
-    <div class="hamburger-wrapper"><img id="hamburger" src="hamburger.svg"></div>
   </main>
   <script src="loader.js"></script>
   <script src="hamburger.js"></script>
+  <script>
+    const cimages = document.querySelector(".gallery");
+    const imgchildren = cimages.children;
+    const number = imgchildren.length;
+    function addEndMargin() {
+      if (window.innerWidth > 750) {
+      imgchildren[number - 1].style.marginRight = "50em";
+      }
+    }
+    window.addEventListener('resize', addEndMargin);
+  </script>
 </body>
 </html>

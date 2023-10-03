@@ -35,45 +35,42 @@
 <body>
     <aside class="loading-screen">
         <img src="FRCtext.png">
-        loading
+        <div class="loader"></div>
     </aside>
   <main>
     <header>
         <img id="logo" src="frc.png">
+        <img id="hamburger" src="hamburger.svg">
     </header>
     
     <section class="index">
         <nav>
             <ul class="nav-wrapper">
               <li class="menutitle">MENU</li>
-              <li><a href="people.html">PEOPLE</a></li>
-              <li><a>ABSTRACT</a></li>
-              <li><a>FILM</a></li>
-              <li><a>OTHERS</a></li>
+              <li><a href="people">PEOPLE</a></li>
+              <li><a href="abtract">ABSTRACT</a></li>
+              <li><a href="fashion">FASHION</a></li>
+              <li><a href="film">FILM</a></li>
             </ul>
           </nav>
         <div class="bio">
             <p>
-                Answer misery adieus add wooded how nay men before though. 
-                Pretended belonging contented mrs suffering. 
-                Answer misery adseus add wooded how nay men before though. 
-                Pretended belonging contented mrs suffering.</p>
+                <b>Finn Crawford</b> is an artist and photographer based out of New York.
+                His work hyperfixates on textures and personalities in everyday objects
+                and people. You can reach him through <a href="mailto:crawfin03@gmail.com">email</a> or on <a href="https://www.instagram.com/crawfin03">instagram</a>.
+            </p>
             </div>
     </section>
     <section class="feature-gallery">
-        <span class="mobile-counter">
-            <div class="mnum">00</div>
-            <div class="mtotal">00</div>
-        </span>
     <div class="gallery">
-        <img src="portrait.jpg">
-        <img class="abstract" src="portrait.jpg">
-        <img class="people" src="portrait.jpg">
-        <img class="mixed" src="portrait.jpg">
+        <img class="abstract" src="photos/DSC3990.jpg">
+        <img class="abstract" src="photos/DSC4250.jpg">
+        <img class="fashion" src="photos/DSC4851.jpg">
+        <img class="people" src="photos/DSC4973.jpg">
+        <img class="people" src="photos/DSC5494.jpg">
+        <img class="fashion" src="photos/DSC5940.jpg">
+        <img class="people" src="photos/DSC6377.jpg">
     </div>
-    <span class="mt-wrapper">
-        <div class="mobile-title">PROJECT_TITLE</div>
-    </span>
     <span class="desktop-info">
         <div>
             <div class="dnum">00</div>
@@ -85,9 +82,20 @@
         </div>
     </span>
     </section>
-    <div class="hamburger-wrapper"><img id="hamburger" src="hamburger.svg"></div>
   </main>
-  <script src="loader.js"></script>
+  <script>
+    function stateChange() {
+      console.log("running statechange");
+      if (document.readyState !== "complete") {
+          document.querySelector("main").style.visibility = "hidden";
+      }
+      else {
+          document.querySelector("main").style.visibility = "visible";
+          document.querySelector(".loading-screen").style.display = "none";
+      }
+    }
+    document.onreadystatechange = setTimeout(stateChange, 2000);
+  </script>
   <script src="hamburger.js"></script>
   <script src="autoslideshow.js"></script>
 </body>
