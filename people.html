@@ -95,7 +95,18 @@
     </section>
     <section class="feature-gallery">
     <div class="gallery">
-        <img rel="preload" src="photos/people/_DSC4329.jpg">
+        <img 
+        rel="preload"
+        src="/dump/people_1_1500.webp"
+        srcset="/dump/people_1_400.webp 400w, /dump/people_1_600.webp 600w, /dump/people_1_800.webp 800w, /dump/people_1_1000.webp 1000w, /dump/people_1_1500.webp 1500w"
+        sizes="90vw"
+        >
+        <img 
+        rel="preload"
+        src="/dump/people_1_1500.webp"
+        srcset="/dump/people_1_400.webp 400w, /dump/people_1_600.webp 600w, /dump/people_1_800.webp 800w, /dump/people_1_1000.webp 1000w, /dump/people_1_1500.webp 1500w"
+        sizes="90vw"
+        >
     </div>
     </section>
   </main>
@@ -106,10 +117,16 @@
     const imgchildren = cimages.children;
     const number = imgchildren.length;
     function addEndMargin() {
-      if (window.innerWidth > 750) {
-      imgchildren[number - 1].style.marginRight = "50em";
+      console.log("running", window.innerWidth);
+      if (window.innerWidth >= 750) {
+        console.log("changing margin to 50em");
+        imgchildren[number - 1].style.marginRight = "50em";
+      }
+      else if (window.innerWidth < 750) {
+        imgchildren[number - 1].style.marginRight = "0";
       }
     }
+    addEndMargin();
     window.addEventListener('resize', addEndMargin);
   </script>
 </body>
