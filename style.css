@@ -141,7 +141,7 @@ nav {
     .mobile-counter {display: none;}
     .mt-wrapper {display: none;}
     .feature-gallery span {width: 100%;}
-    #logo {width: 100px;}
+    #logo {width: 100px; height: auto;}
     .altbio {display: block;}
     .mbio {display: none;}
     .loading-screen img {width: 600px;}
