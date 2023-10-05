@@ -116,7 +116,6 @@ nav {
     max-width: 90vw;
     margin: 2em 0;
 }
-.feature-gallery img {max-width: 87vw;}
 .loading-screen {
     display: flex;
     position: absolute;
@@ -192,9 +191,9 @@ nav {
         justify-content: center;
     }
     .gallery img {
-    width: 100%;
-    max-height: 80vh;
-    margin-bottom: 5px;
+        max-height: 80vh;
+        max-width: none;
+        margin-bottom: 5px;
     }
     main {
         height: calc(100% - 2em);
