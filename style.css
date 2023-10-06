@@ -48,9 +48,10 @@ header {
 }
 .index {
     display: none;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    height: 80vh;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 .altbio {display: none;}
 .bio img {margin: 0 1em 0 0;}
@@ -58,13 +59,15 @@ header {
     color: black;
 }
 nav {
-    margin-bottom: 4em;
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    font-size: 21px;
+    margin-bottom: 1.5em;
 }
 .nav-wrapper {
-    text-align: center;
+    text-align: left;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -90,6 +93,7 @@ nav {
 }
 .bio {
     text-align: justify;
+    font-size: 16px;
 }
 .feature-gallery {
     font-size: 12px;
@@ -140,7 +144,7 @@ nav {
     .mobile-counter {display: none;}
     .mt-wrapper {display: none;}
     .feature-gallery span {width: 100%;}
-    #logo {width: 100px; height: auto;}
+    #logo {width: 100px; height: 80px;}
     .altbio {display: block;}
     .mbio {display: none;}
     .loading-screen img {width: 600px;}
