@@ -28,36 +28,7 @@
         
     </title>
     <link rel="icon" type="image/png" href="icon.png">
-    <link rel="stylesheet" href="style.css">
-    <style>
-      .gallery {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      @media screen and (min-width: 750px) {
-        .feature-gallery {
-          transform: rotate(-90deg) translateX(-100vh);
-          transform-origin: top left;
-          will-change: transform;
-          overflow-y: scroll;
-          overflow-x: hidden;
-          justify-content: left;
-          height: 100vw;
-        }
-        .gallery {
-          transform: rotate(90deg) translateY(-100vh);
-          transform-origin: top left;
-          display: flex;
-          justify-content: left;
-          flex-direction: row;
-        }
-        .gallery img {
-          margin: 0 2em;
-        }
-        .index {width: 200px;}
-      }
-    </style>
+    <link rel="stylesheet" href="pagestyle.css">
 </head>
 <body>
   <aside class="loading-screen">
@@ -214,22 +185,6 @@
   </main>
   <script src="loader.js"></script>
   <script src="hamburger.js"></script>
-  <script>
-    const cimages = document.querySelector(".gallery");
-    const imgchildren = cimages.children;
-    const number = imgchildren.length;
-    function addEndMargin() {
-      console.log("running", window.innerWidth);
-      if (window.innerWidth >= 750) {
-        console.log("changing margin to 50em");
-        imgchildren[number - 1].style.marginRight = "50em";
-      }
-      else if (window.innerWidth < 750) {
-        imgchildren[number - 1].style.marginRight = "0";
-      }
-    }
-    addEndMargin();
-    window.addEventListener('resize', addEndMargin);
-  </script>
+  <script src="addmargin.js"></script>
 </body>
 </html>

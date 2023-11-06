@@ -1,0 +1,237 @@
+html {height: 100%;}
+#logo {width: 60px; height: auto;}
+.loader {
+    margin-top: 5px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid black;
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+body {
+    font-family: area-normal;
+    font-weight: 400;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 1.4em;
+    height: 100%;
+    margin: 0;
+}
+main {
+    height: auto;
+    visibility: hidden;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: .0fr 1fr;
+}
+header {
+    background-color: white;
+    font-weight: 800;
+    padding: .5em;
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    justify-content: space-between;
+}
+.index {
+    display: none;
+    flex-direction: column;
+    height: 73vh;
+    align-items: center;
+    justify-content: flex-end;
+}
+.altbio {display: none;}
+.bio img {margin: 0 1em 0 0;}
+.bio a {
+    color: #4161D2;
+}
+nav {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    font-size: 21px;
+    margin-bottom: 2em;
+}
+.nav-wrapper {
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-wrapper li {
+    font-weight: 600;
+    padding: .5em 0;
+}
+.nav-wrapper li a {
+    color: #4161D2;
+    text-decoration: none;
+}
+.hamburger-wrapper {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    bottom: 2em;
+    width: calc(100% - 2em);
+}
+#hamburger {
+    width: 27px;
+    border: none;
+}
+.bio {
+    word-spacing: .2em;
+    letter-spacing: .5px;
+}
+.feature-gallery {
+    font-size: 12px;
+    letter-spacing: .7px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+.feature-gallery span {
+    width: 16px;
+}
+.mobile-title {
+    margin-left: 2px;
+    transform: rotate(90deg)
+}
+.mt-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+.gallery img {
+    width: auto;
+    max-width: 90vw;
+    margin: 2em 0;
+}
+.loading-screen {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.loading-screen img {
+    width: 300px;
+}
+.num {border-bottom: 1px solid black;}
+.mobile-counter {margin: 5% 5px 0 0;}
+.desktop-info {display: none;}
+.menutitle {display: none;}
+
+@media screen and (min-width: 750px) {
+    body {overflow: hidden;}
+    #hamburger {display: none;}
+    .mobile-counter {display: none;}
+    .mt-wrapper {display: none;}
+    .feature-gallery span {width: 100%;}
+    #logo {width: 100px; height: 80px;}
+    .altbio {display: block;}
+    .mbio {display: none;}
+    .loading-screen img {width: 600px;}
+    .desktop-info {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .desktop-info div {display: flex;}
+    .desktop-info div div {margin: 0 2px;}
+    .num {border: none;}
+    header {
+        height: auto;
+        position: static;
+        grid-area: header;
+        justify-content: left;
+        padding-left: 3em;
+    }
+    .index {
+        display: flex;
+        background-color: white;
+        margin-left: 3em;
+        padding-right: 2em;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 200px;
+        height: 75vh;
+        grid-area: index;
+    }
+    nav {
+        margin-top: 5em;
+        font-size: 15px;
+    }
+    .nav-wrapper {
+        text-align: left;
+    }
+    .nav-wrapper .menutitle {
+        display: block;
+        text-decoration: underline;
+        margin-bottom: 1em;
+    }
+    .nav-wrapper li {
+        font-weight: 600;
+        padding: .1em 0;
+    }
+    .nav-wrapper li a {
+        color: #4161D2;
+    }
+    .feature-gallery {
+        transform: rotate(-90deg) translateX(-100vh);
+        transform-origin: top left;
+        will-change: transform;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        justify-content: left;
+        height: 100vw;
+        flex-direction: column;
+        margin-top: -4em;
+        grid-area: feature;
+        width: fit-content;
+    }
+    .gallery {
+        transform: rotate(90deg) translateY(-100vh);
+        transform-origin: top left;
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+      }
+    .gallery img {
+        max-height: 80vh;
+        max-width: none;
+        margin-bottom: 5px;
+        margin: 0 2em;
+    }
+    main {
+        height: calc(100% - 2em);
+        grid-template-rows: none;
+        grid-template-areas:
+                    "header header header"
+                    "index feature feature"
+                    "index feature feature"
+                    "index feature feature"
+                    "index feature feature";
+    }
+}
