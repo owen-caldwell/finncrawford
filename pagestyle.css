@@ -103,6 +103,12 @@ nav {
     justify-content: center;
     height: fit-content;
 }
+.feature-gallery:hover {
+    cursor: grab;
+}
+.feature-gallery:active {
+    cursor: grabbing;
+}
 .feature-gallery span {
     width: 16px;
 }

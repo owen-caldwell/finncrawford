@@ -1,5 +1,5 @@
 // INVERTED "drag to scroll" -- such that dragging left/right scrolls up/down.
-const container = document.querySelector('#image-wrapper');
+const container = document.querySelector('.feature-gallery');
 
 let startY;
 let startX;
