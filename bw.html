@@ -311,9 +311,26 @@
     </div>
     </section>
   </main>
-  <script src="inverteddragscroll.js"></script>
   <script src="loader.js"></script>
-  <script src="hamburger.js"></script>
-  <script src="addmargin.js"></script>
+  <script>
+    const index = document.querySelector(".index");
+    const feature = document.querySelector("grid-outside");
+    const hamburger = document.querySelector("#hamburger");
+    let open = false;
+    function toggleIndex() {
+        if (open === false) {
+            open = true;
+            index.style.display = "flex";
+            feature.style.display = "none";
+            hamburger.src = "close.svg";
+        } else {
+            open = false;
+            index.style.display = "none";
+            feature.style.display = "flex";
+            hamburger.src = "hamburger.svg";
+        }
+    }
+    hamburger.addEventListener("click", toggleIndex);
+  </script>
 </body>
 </html>

@@ -397,6 +397,9 @@ close-btn:focus>span {
 }
 
 @media screen and (max-width: 768px) {
+    main {
+        display: block;
+    }
     grid-container {
         flex-direction: column;
         flex-wrap: nowrap;
